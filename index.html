@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="utf-8">
+      <title>My Top Favorite Cars</title>
+      <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+      <style media="screen">
+         body{
+         text-align: center;
+         background-color: #FCFBE3;
+         font-family: 'Lobster', cursive;
+         }
+         .Car{
+         margin-right: 20px;
+         margin-top: 10px;
+         margin-bottom: 20px;
+         border: 5px solid black;
+         }
+         .Main h1, p{
+         text-align: center;
+         border: 5px solid black;
+         }
+         h1{
+         margin-left: 450px;
+         margin-right: 450px;
+         }
+         p{
+         margin-left: 350px;
+         margin-right: 350px;
+         margin-top: 25px;
+         padding: 25px;
+         }
+      </style>
+   </head>
+   <body>
+      <img src="images/Audi.jpg" class="Car" id="Audi" title="Audi R8 V10" onmouseover="changeImage1()" onmouseout="onMouseOut()" width="200" height="140" alt="The Audi R8 is a mid-engine, 2-seater sports car, which uses Audi's trademark quattro permanent all-wheel drive system.
+         The base engine is a 5.2-liter 540-hp V-10
+         The interior features a 12.3-inch configurable display in lieu of traditional gauges; there is also 4G LTE connectivity and Wi-Fi hotspot capability.">
+      <img src="images/LamborghiniHuracan.jpg" class="Car" id="Lambo"title="Lamborghini Huracan" onmouseover="changeImage2()" onmouseout="onMouseOut()" width="200" height="140" alt="The Huracan has a 5.2-liter V-10 engine with a seven-speed dual-clutch automatic; with rear-wheel drive, it makes 571 hp and with all-wheel drive it produces 602 hp.">
+      <img src="images/BuggatiChiron.jpg" class="Car" id="Buggati" title="Buggati Chiron"onmouseover="changeImage3()" onmouseout="onMouseOut()" width="200" height="140" alt="The Buggati Chiron has an 8.0-liter 16-cylinder engine utilizes four turbos to make 1500 hp and 1180 lb-ft of torque; Bugatti claims a top speed of 261 mph. A seven-speed automatic routes that power through all four wheels.">
+      <img src="images/AshtonMartinVulcan.jpg" class="Car" id="Ashton" title="Ashton Martin Vulcan"onmouseover="changeImage4()" onmouseout="onMouseOut()" width="224" height="140"  alt="The Ashton Martin has a rear-wheel drive, track-only sports car that runs on a new 7L V12 engine mounted on an aluminium alloy chassis and carbon fibre body delivering 800 brake horsepower(600 kW).">
+      <div class="Main">
+         <img src="images/Audi.jpg" id="Default" alt="" width="600" height="340">
+         <h1 id="title">Audi R8 V10</h1>
+         <p id="description">The Audi R8 is a mid-engine, 2-seater sports car, which uses Audi's trademark quattro permanent all-wheel drive system.
+            The base engine is a 5.2-liter 540-hp V-10
+            The interior features a 12.3-inch configurable display in lieu of traditional gauges; there is also 4G LTE connectivity and Wi-Fi hotspot capability.
+         </p>
+      </div>
+      <script>
+         function changeImage1(){
+           document.getElementById('Default').src="images/Audi.jpg";
+           var title = document.getElementById('title');
+           title.style.borderColor="black";
+           title.innerHTML="Audi R8 V10";
+
+           var p1 = document.getElementById('description');
+           p1.innerHTML="The Audi R8 is a mid-engine, 2-seater sports car, which uses Audi's trademark quattro permanent all-wheel drive system.The base engine is a 5.2-liter 540-hp V-10. The interior features a 12.3-inch configurable display in lieu of traditional gauges; there is also 4G LTE connectivity and Wi-Fi hotspot capability.";
+           p1.style.borderColor="black";
+
+           var img = document.getElementById('Audi');
+           img.style.borderColor="purple";
+         }
+
+         function changeImage2(){
+             document.getElementById('Default').src="images/LamborghiniHuracan.jpg";
+             var title = document.getElementById('title');
+             title.style.borderColor="black";
+             title.innerHTML="Lamborghini Huracan";
+
+             var p1 = document.getElementById('description');
+             p1.innerHTML=" The Huracan has a 5.2-liter V-10 engine with a seven-speed dual-clutch automatic; with rear-wheel drive, it makes 571 hp and with all-wheel drive it produces 602 hp.";
+             p1.style.borderColor="black";
+
+             var img = document.getElementById('Lambo');
+             img.style.borderColor="blue";
+         }
+
+         function changeImage3(){
+               document.getElementById('Default').src="images/BuggatiChiron.jpg";
+             var title = document.getElementById('title');
+             title.style.borderColor="black";
+             title.innerHTML="Buggati Chiron";
+
+             var p1 = document.getElementById('description');
+             p1.innerHTML="The Buggati Chiron has an 8.0-liter 16-cylinder engine utilizes four turbos to make 1500 hp and 1180 lb-ft of torque; Bugatti claims a top speed of 261 mph. A seven-speed automatic routes that power through all four wheels.";
+             p1.style.borderColor="black";
+
+             var img = document.getElementById('Buggati');
+             img.style.borderColor="red";
+           }
+
+         function changeImage4(){
+             document.getElementById('Default').src="images/AshtonMartinVulcan.jpg";
+             var title = document.getElementById('title');
+             title.style.borderColor="black";
+             title.innerHTML="Ashton Martin Vulcan";
+
+             var p1 = document.getElementById('description');
+             p1.innerHTML="The Ashton Martin has a rear-wheel drive, track-only sports car that runs on a new 7L V12 engine mounted on an aluminium alloy chassis and carbon fibre body delivering 800 brake horsepower(600 kW).";
+             p1.style.borderColor="black";
+
+             var img = document.getElementById('Ashton');
+             img.style.borderColor="green";
+             }
+
+             function onMouseOut(){
+               document.getElementById('Audi').style.borderColor="black";
+               document.getElementById('Lambo').style.borderColor="black";
+               document.getElementById('Buggati').style.borderColor="black";
+               document.getElementById('Ashton').style.borderColor="black";
+             }
+
+      </script>
+   </body>
+</html>
